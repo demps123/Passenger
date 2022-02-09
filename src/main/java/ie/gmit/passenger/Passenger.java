@@ -5,6 +5,7 @@ public class Passenger {
     public String title;
     public String name;
 
+
     public Passenger(String title, String name) {
         setTitle(title);
         setName(name);
