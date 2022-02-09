@@ -4,11 +4,12 @@ public class Passenger {
 
     public String title;
     public String name;
+    public String ID;
 
-
-    public Passenger(String title, String name) {
+    public Passenger(String title, String name, String ID) {
         setTitle(title);
         setName(name);
+        setID(ID);
     }
 
     public void setTitle(String t) {
@@ -35,4 +36,15 @@ public class Passenger {
         return name;
     }
 
+    public void setID(String i) {
+        if(i.length() >= 10) {
+            this.ID = i;
+        }
+        else {
+            throw new IllegalArgumentException("Invalid ID provided");
+        }
+    }
+    public String getID() {
+        return ID;
+    }
 }
